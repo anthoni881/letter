@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/App.css";
+import Letter from "./components/Letter";
+import Img from "./images/download.jpeg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">Surat untuk Untung ...</div>
+      <div className="letter-wrapper">
+        <Letter
+          name="Anthoni Setiawan"
+          extras={`"Dibaca ya ka suratnya heuheuheuheuheuh"`}
+          img={Img}
+        />
+        <Letter
+          name="Anthoni Setiawan"
+          extras={`"Dibaca ya ka suratnya heuheuheuheuheuh"`}
+          img={Img}
+        />
+        <Letter
+          name="Anthoni Setiawan"
+          extras={`"Dibaca ya ka suratnya heuheuheuheuheuh"`}
+          img={Img}
+        />
+        <Letter
+          name="Anthoni Setiawan"
+          extras={`"Dibaca ya ka suratnya heuheuheuheuheuh"`}
+          img={Img}
+        />
+        <Letter
+          name="Anthoni Setiawan"
+          extras={`"Dibaca ya ka suratnya heuheuheuheuheuh"`}
+          img={Img}
+        />
+      </div>
     </div>
   );
 }
