@@ -1,43 +1,96 @@
-.container-letter {
-  max-width: 330px;
-  border: 1px solid black;
-  margin: 30px 40px;
-  border-radius: 8px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.avatar {
-  margin-top: 30px;
+
+.envelope {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #fff;
+  border-right: 75px solid #eee;
+  border-bottom: 50px solid #ddd;
+  border-left: 75px solid #eee;
+  border-radius: 10px;
 }
-.name {
-  margin: 30px 0;
-  font-size: 24px;
-}
-.extras {
-  font-size: 18px;
-}
-.letter-icon {
-  width: 30%;
-  margin: 30px 0;
-  animation: heartBeat 1.2s infinite;
+
+.heart {
+  width: 25px;
+  height: 25px;
+  background: #ff3838;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: heartBeat 1.6s linear infinite;
   cursor: pointer;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: #ff3838;
+  transform: translateY(-55%);
+  border-radius: 50%;
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background: #ff3838;
+  transform: translateX(-55%);
+  border-radius: 50%;
+}
+
+.card {
+  right: 20%;
+  bottom: 0;
+  width: 100px;
+  height: 200px;
+  background: white;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.flap .envelope::before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.flap .envelope .card {
+  bottom: 100px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+
+.flap .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
 }
 
 @keyframes heartBeat {
   0% {
-    transform: scale(0.8);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
   }
   5% {
-    transform: scale(0.9);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.9);
   }
   10% {
-    transform: scale(0.8);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
   }
   15% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
   }
   50% {
-    transform: scale(0.8);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
   }
   100% {
-    transform: scale(0.8);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.8);
   }
 }
