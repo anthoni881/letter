@@ -1,14 +1,14 @@
 import React from "react";
 import "../css/PersonCard.css";
-import Letter from "./Letter";
+import Envelope from "./Envelope";
 
 const PersonCard = (props) => {
   return (
-    <div className="container-letter">
+    <div className="card-container">
       <img className="avatar" src={props.img} alt="person-img" />
       <div className="name">{props.name}</div>
-      <div className="extras">{props.extras}</div>
-      <Letter></Letter>
+      <div className="extras">"{props.extras}"</div>
+      <Envelope>{props.children} </Envelope>
     </div>
   );
 };

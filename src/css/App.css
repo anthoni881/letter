@@ -7,7 +7,7 @@ body {
   background-color: #ffe0b3;
 }
 .title {
-  margin: 30px 0;
+  margin: 40px 15px;
 }
 
 .App {
@@ -15,9 +15,9 @@ body {
 }
 
 .letter-wrapper {
-  display: grid;
-  grid-template-columns: auto auto;
-  max-width: 780px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
 }
 .title {
