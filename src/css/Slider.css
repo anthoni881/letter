@@ -1,0 +1,9 @@
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider-button {
+  width: 25px;
+  height: 30px;
+}

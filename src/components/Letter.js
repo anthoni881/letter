@@ -1,13 +1,10 @@
 import React from "react";
 import "../css/Letter.css";
 
-const Letter = () => {
+const Letter = (props) => {
   return (
-    <div className="container flap">
-      <div className="envelope">
-        <div className="heart"></div>
-        {/* <div className="card"></div> */}
-      </div>
+    <div className={props.isOpen ? "card-in" : "card-out"}>
+      {props.children}
     </div>
   );
 };
